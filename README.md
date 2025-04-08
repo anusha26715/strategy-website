@@ -1,2 +1,2 @@
 # projects
-Driven do become a MERN stack web developer
+Driven to become a MERN stack web developer
