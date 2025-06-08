@@ -12,14 +12,16 @@
     --color-yellow:rgb(216, 153, 38);
     --color-white: #ffffff;
     --color-ash: rgb(176, 171, 171);
-    --color-nav-text:rgb(188, 184, 184);
+    --color-nav-text:rgb(214, 211, 211);
     --color-dark:rgb(38, 38, 38);
     --color-black:#101C23;
     --color-bg:#031119;
+    --width-common:88%;
 }
 
 .app-container{
     background-color: var(--color-bg);
+    height: 500vh;
 }
 
 .header-container{
@@ -42,7 +44,7 @@ button>a,.navbar-brand{
 #navBar{
     background-color: var(--color-dark) !important;
     border-radius: 40px;
-    width: 88%;
+    width: var(--width-common);
     padding: 18px !important;
     
 }
@@ -120,17 +122,28 @@ button>a,.navbar-brand{
 /* MAIN CONTAINER STYILING */
 .main-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .main-container>section{
-    width: 88%;
+    width:var(--width-common);
+    padding: 50px 0px;
 }
 .home-container{
     /* display: flex;
     flex-direction: column; */
 }
 
+.home-top>h1{
+    font-size: clamp(40px,6vw,100px)!important;
+    font-weight: bold;
+}
+
+.home-top>p{
+    color: var(--color-nav-text)!important;
+}
 
 .explore-services-btn{
     background-color: transparent;
@@ -225,6 +238,128 @@ button>a,.navbar-brand{
 }
 
 
+/* about section */
+
+.head-line {
+    font-size: 14px;
+    color: var(--color-nav-text) !important;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1px;
+}
+
+.head-line::after{
+    content:"";
+    display: inline-block;
+    width: 120px;
+    height: 1px;
+    background-color: var(--color-yellow);
+    margin: 4px 10px;
+}
+
+.about-container>h2{
+    font-weight: bold;
+}
+
+.about-content-container{
+    width: 100%;
+    height: fit-content;
+}
+
+#Row{
+    --bs-gutter-x:0;
+    margin: 7% 0;
+}
+
+.img-content-container{
+    width: 90%;
+    padding: 0!important;
+    position: relative;
+    height: fit-content;
+}
+
+.img-fluid{
+    border-radius: 20px !important;
+}
+
+.experience-badge{
+    background-color: var(--color-yellow);
+    padding: 12px 26px 20px 26px;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+
+.experience-num{
+    font-size: 36px;
+    font-weight: bold;
+    
+}
+
+
+.about-context>h2{
+    font-weight: bold;
+    font-size: clamp(28px,5vw,38px);
+}
+
+.about-context-para1{
+    font-size: 20px;
+    color: var(--color-ash)!important;
+    font-weight: 0 !important;
+}
+
+.about-context-para2, .about-card>p{
+    font-size: 16px;
+    color: var(--color-nav-text)!important;
+}
+
+.about-cards{
+    padding: 20px 0;
+}
+
+.about-card>h5{
+    font-size: 20px;
+}
+
+.about-card{
+    background-color: var(--color-dark);
+    border-radius: 12px;
+    padding: 18px;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-card:hover{
+    transform: translateY(-15px);
+}
+
+.about-card i{
+    color: var(--color-yellow) !important;
+    font-size: 30px;
+}
+
+.abt-explore-service-btn{
+    background-color: var(--color-yellow);
+    padding: 10px 32px;
+    border-radius: 35px;
+    transition: all 0.4s ease-in-out;
+}
+
+.abt-explore-service-btn:hover{
+    background-color: rgb(201, 134, 2);
+}
+
+.abt-explore-service-btn>a{
+    text-decoration: none;
+}
 
 @media (max-width:393px){
     *{
@@ -281,7 +416,7 @@ button>a,.navbar-brand{
         right: 0px;
     }
     .abstract-img{
-        height: 99%;
+        height: 94%;
     }
 
     .home-top{
@@ -290,4 +425,17 @@ button>a,.navbar-brand{
         flex-direction: column;
         justify-content: space-around;
     }
+
+    .about-content-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .about-context{
+        padding-left:3% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
+
