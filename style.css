@@ -9,6 +9,7 @@
 }
 
 :root{
+    --color-hover-yellow:rgb(201, 134, 2);
     --color-yellow:rgb(216, 153, 38);
     --color-white: #ffffff;
     --color-ash: rgb(176, 171, 171);
@@ -21,7 +22,32 @@
 
 .app-container{
     background-color: var(--color-bg);
-    height: 500vh;
+}
+
+.scroll-down{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0; 
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 10000;
+}
+
+.scroll-down.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-down>i{
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    font-size: 26px;
+    padding: 8px;
+}
+
+#scrolldownArrow:hover{
+    background-color: var(--color-hover-yellow);
 }
 
 .header-container{
@@ -305,7 +331,7 @@ button>a,.navbar-brand{
 }
 
 
-.about-context>h2{
+.about-context>h2,.clients-section>h2{
     font-weight: bold;
     font-size: clamp(28px,5vw,38px);
 }
@@ -316,8 +342,8 @@ button>a,.navbar-brand{
     font-weight: 0 !important;
 }
 
-.about-context-para2, .about-card>p{
-    font-size: 16px;
+.about-context-para2, .about-card>p, .clients-section>p{
+    font-size: 17px;
     color: var(--color-nav-text)!important;
 }
 
@@ -344,6 +370,8 @@ button>a,.navbar-brand{
 .about-card i{
     color: var(--color-yellow) !important;
     font-size: 30px;
+    padding-bottom: 10px !important;
+    display: inline-block;
 }
 
 .abt-explore-service-btn{
@@ -354,11 +382,82 @@ button>a,.navbar-brand{
 }
 
 .abt-explore-service-btn:hover{
-    background-color: rgb(201, 134, 2);
+    background-color: var(--color-hover-yellow);
 }
 
 .abt-explore-service-btn>a{
     text-decoration: none;
+}
+
+.arrow-container i{
+    color: var(--color-dark) !important;
+    font-size: 40px;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow-container i:hover{
+    color: var(--color-yellow) !important;
+    cursor: pointer;
+}
+
+.star-container>i{
+    color: var(--color-yellow) !important;
+}
+
+.client-testimonial{
+    display: flex;
+    width: max-content;
+}
+
+.client-testimonial>img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.testimonial-context{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.testimonial-context>h6{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.testimonial-context>span{
+    font-size: 12px;
+    color: var(--color-ash) !important;
+}
+
+.client-cards{
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 2s ease-in-out;
+  width: max-content;
+  height: fit-content !important;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.each-card {
+  flex: 0 0 14%;
+  background-color: var(--color-dark);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .each-card {
+    flex: 0 0 9%;
+  }
 }
 
 @media (max-width:393px){
