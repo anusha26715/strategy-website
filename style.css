@@ -14,7 +14,7 @@
     --color-white: #ffffff;
     --color-ash: rgb(176, 171, 171);
     --color-nav-text:rgb(214, 211, 211);
-    --color-dark:rgb(38, 38, 38);
+    --color-dark:#1B262C;
     --color-black:#101C23;
     --color-bg:#031119;
     --width-common:88%;
@@ -283,7 +283,7 @@ button>a,.navbar-brand{
     margin: 4px 10px;
 }
 
-.about-container>h2{
+.about-container>h2,.service-container>h2{
     font-weight: bold;
 }
 
@@ -454,6 +454,155 @@ button>a,.navbar-brand{
     padding: 20px;
 }
 
+
+/* services section */
+.service-context{
+    padding: 10% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-context>h3{
+    font-size: clamp(26px,5vw,56px);
+    font-weight: bold;
+}
+
+.service-context span{
+    color: var(--color-yellow)!important;
+}
+
+#svcViewServices{
+    background-color: var(--color-yellow) !important;
+    border-radius: 5px ;
+    border: none;
+}
+
+#svcViewServices:hover{
+    background-color: var(--color-hover-yellow) !important;
+}
+
+#svcViewServices>a,#svcViewServices>i{
+    color: var(--color-white) !important;
+}
+
+.service-content>p,.each-service-card>p{
+    color: var(--color-nav-text)!important;
+}
+
+.service-cards{
+    row-gap:30px
+}
+
+.service-card-wrapper{
+    position: relative;
+}
+
+.each-service-card{
+    margin: 5px;
+    padding: clamp(25px,10%,40px);
+    height: 100%;
+    border: 2px solid var(--color-dark);
+    transition: all 0.5s ease-in-out;
+}
+
+.each-service-card>h4{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 26px 0 18px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.service-card-wrapper:hover .each-service-card{
+  background-color: var(--color-dark);
+  clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 0 100%);
+  cursor: pointer;
+}
+
+.service-card-wrapper:hover .service-arrow-container{
+    animation: move-service-arrowin 0.5s ease-in-out forwards;
+}
+
+.service-card-wrapper:not(:hover) .service-arrow-container {
+  animation: move-service-arrowout 0.5s ease-in-out forwards;
+}
+
+@keyframes move-service-arrowin {
+    from {
+        opacity: 0;
+    transform: translateY(50px); /* starts lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* moves up to original position */
+  }
+}
+
+@keyframes move-service-arrowout {
+    from {
+        opacity: 1;
+    transform: translateY(0); /* starts lower */
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px); /* moves up to original position */
+  }
+}
+
+.each-service-card:hover i{
+    transform: scale(1.15);
+}
+
+.each-service-card:hover h4{
+    color: var(--color-yellow) !important;
+}
+
+.service-icon-container{
+    width: 72px;
+    height: 72px;
+    background-color: #1A1F1A;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon-container>i{
+    font-size: 36px;
+    color: var(--color-yellow) !important;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.service-arrow-container{
+    height: 90px;
+    width: 90px;
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    z-index: 1500;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.service-arrow-container>i{
+    display: inline-block;
+    font-size: 150%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.service-arrow-container:hover i{
+    transform: rotate(45deg);
+}
+
 @media (min-width: 768px) {
   .each-card {
     flex: 0 0 9%;
@@ -478,6 +627,9 @@ button>a,.navbar-brand{
     }
     #getstartedBtn{
         display: none;
+    }
+    .service-context>h3{
+        padding-bottom: 28px;
     }
 }
 
