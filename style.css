@@ -939,12 +939,12 @@ section>h2,.testimonial-container>h2{
     transition: all 0.5s ease-in-out;
 }
 
-#activeCategory{
+#activee{
     background-color: var(--color-yellow);
     color: var(--color-white)!important;
 }
 
-#activeCategory>i{
+#activee>i{
     color: var(--color-white)!important;
 }
 

@@ -72,4 +72,135 @@ updateCarousel();
 
 startAutoplay();
 
+const categoryList = [
+    {
+        category:"uiux",
+        description:"ui/ux description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"uiux",
+        description:"ui/ux description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"uiux",
+        description:"ui/ux description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"uiux",
+        description:"ui/ux description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"uiux",
+        description:"ui/ux description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"developing",
+        description:"developing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"developing",
+        description:"developing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"developing",
+        description:"developing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"developing",
+        description:"developing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"developing",
+        description:"developing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"photography",
+        description:"photography description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"photography",
+        description:"photography description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"photography",
+        description:"photography description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"photography",
+        description:"photography description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"photography",
+        description:"photography description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"marketing",
+        description:"marketing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"marketing",
+        description:"marketing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"marketing",
+        description:"marketing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"marketing",
+        description:"marketing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"marketing",
+        description:"marketing description",
+        image:"assets/images/portfolio-1.webp"
+    },
+    {
+        category:"marketing",
+        description:"marketing description",
+        image:"assets/images/portfolio-1.webp"
+    }
+]
+
+const categoryEl = document.getElementById("categoryList")
+const categoryBtns = document.querySelectorAll(".category-btn")
+
+function renderCategories(category){
+    categoryEl.innerHTML = '';
+
+    const filtered = category === "all"?categoryList:categoryList.filter(each => each.category === category)
+    console.log(category)
+}
+
+categoryBtns.forEach(btn => {
+    btn.addEventListener("click",()=>{
+        categoryBtns.forEach(each => each.removeAttribute("id"))
+        btn.setAttribute("id","activee")
+        const selectedCategory = btn.getAttribute("data-category");
+        renderCategories(selectedCategory);
+    })
+})
+
+renderCategories("all")
+
+
+
 
