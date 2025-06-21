@@ -1096,6 +1096,141 @@ section>h2,.testimonial-container>h2{
     border-color: var(--color-yellow) !important;
 }
 
+/* price section */
+
+.pricing-card{
+    background-color: var(--color-dark);
+    border-radius: 15px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.pricing-card:hover{
+    transform: translateY(-10px);
+}
+
+.popular{
+    border: 2px solid var(--color-yellow);
+}
+
+.regular{
+    border: 1px solid rgb(100, 99, 99);
+}
+
+.popular-tag{
+    background-color: var(--color-yellow);
+    padding: 5px 40px;
+    width: max-content;
+    position: absolute;
+    top: 30px;
+    right: -40px;
+    transform: rotate(45deg);
+}
+.plan-header{
+    padding: 40px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-header>h3{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.plan-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 204, 0,0.1);
+    border-radius: 50%;
+    font-size: 26px;
+}
+
+.plan-icon>i{
+    color: var(--color-yellow)!important;
+}
+
+.plan-pricing{
+    padding: 5px 30px 30px;
+}
+
+.price{
+    font-weight: bold;
+    text-align: center;
+}
+
+.price .currency{
+    vertical-align: top;
+    line-height: 1;
+    font-size: 24px;
+}
+
+.amount{
+    font-size: 50px;
+    line-height: 1;
+}
+
+.period{
+    color: var(--color-ash) !important;
+}
+
+
+.plan-features ul{
+    list-style-type: none;
+    line-height: 3rem;
+}
+.each-feature{
+    color: var(--color-ash) !important;
+}
+.each-feature>i{
+    color: var(--color-yellow)!important;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.disabled{
+    color: gray !important;
+}
+
+.disabled>i{
+    color: gray !important;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.plan-ctnr{
+    padding: 15px 30px 40px;
+}
+
+.plan-ctnr>a{
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--color-yellow);
+    width: 100%;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.plan-ctnr>a:hover{
+    background-color: rgba(255, 174, 0,0.7);
+}
+
+.btn-plan{
+    background-color: rgba(67, 67, 67,0.3) !important;
+}
+
+.btn-plan:hover{
+    background-color: rgba(123, 122, 122,0.6) !important;
+}
+
 
 @media (max-width:393px){
     *{
@@ -1114,6 +1249,12 @@ section>h2,.testimonial-container>h2{
         width: 100%;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 0;
+    }
+    .member-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
