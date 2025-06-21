@@ -17,6 +17,7 @@
     --color-dark:#1B262C;
     --color-black:#101C23;
     --color-bg:#031119;
+    --color-navy:#0D1D26;
     --width-common:88%;
 }
 
@@ -850,7 +851,7 @@ section>h2,.testimonial-container>h2{
 
 #testimonials{
     width: 100%;
-    background-color: #0D1D26;
+    background-color: var(--color-navy);
     display: flex;
     justify-content: center;
 }
@@ -894,14 +895,14 @@ section>h2,.testimonial-container>h2{
 
 /* portfolio section */
 
-#portfolio{
+#portfolio,#team{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.portfolio-headline{
+.headline-ctnr,.team-ctnr{
     width: var(--width-common);
 }
 
@@ -1019,12 +1020,82 @@ section>h2,.testimonial-container>h2{
     background-color: var(--color-yellow);
 }
 
+/* team section */
 
-@media (min-width: 768px) {
-  .each-card {
-    flex: 0 0 9%;
-  }
+.team-section{
+    background-color: var(--color-navy);
 }
+
+.member-ctnr,.member-img{
+    width: var(--width-common);
+}
+
+
+
+.member-wrapper{
+    margin-bottom: 20px;
+}
+
+
+.each-member{
+    display: flex;
+    flex-direction: column;
+    margin: 4% 0;
+    border: 1px solid rgb(76, 75, 75);
+    background-color: var(--color-dark);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.each-member:hover{
+    border-color: var(--color-yellow);
+}
+
+.member-img{
+    width: fit-content;
+}
+
+.member-img>img{
+    width:12rem;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.member-info>h3{
+    font-size: 20px;
+}
+
+
+.member-info>span,p{
+    color: var(--color-ash) !important;
+    font-size: 14px;
+}
+
+.social{
+    display: flex;
+    column-gap: 15px;
+}
+
+.social>a{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(56, 56, 56);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.social>a:hover i{
+    color: var(--color-yellow) !important;
+}
+
+.social>a:hover{
+    border-color: var(--color-yellow) !important;
+}
+
 
 @media (max-width:393px){
     *{
@@ -1038,6 +1109,14 @@ section>h2,.testimonial-container>h2{
     }
 }
 
+@media (max-width:576px){
+    .member-img>img{
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+}
+
 @media (min-width:576px) {
     .features{
         display: flex;
@@ -1046,7 +1125,18 @@ section>h2,.testimonial-container>h2{
     .cta-btns{
         flex-direction: row;
     }
+    .each-member{
+        flex-direction: row;
+        margin: 0;
+    }
 }
+
+@media (min-width: 768px) {
+  .each-card {
+    flex: 0 0 9%;
+  }
+}
+
 
 @media (max-width:991px) {
     .btn-container{
