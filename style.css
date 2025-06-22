@@ -1340,7 +1340,7 @@ section>h2,.testimonial-container>h2{
 
 .contact-form-wrapper{
     background-color: var(--color-dark);
-    padding: clamp(12px,5%,30px);
+    padding: clamp(8px,5%,30px);
     border-radius: 15px;
     text-align: center;
 }
@@ -1408,11 +1408,70 @@ section>h2,.testimonial-container>h2{
     transition: all 0.3s ease-in-out;
 }
 
-
+footer{
+    width: var(--width-common);
+}
 .form-btn>button:hover{
     background-color: var(--color-hover-yellow);
     box-shadow: 0 0 5px 2px var(--color-yellow);
     transform: translateY(-5px);
+}
+
+hr{
+    height: 2px;
+    width: 86vw;
+}
+
+.footer-about>a{
+    font-size: 26px;
+    text-decoration: none;
+    color: #ffffff !important;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-links a{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--color-ash) !important;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding-left: 0;
+    line-height: 2.42rem;
+}
+
+.footer-links>h4,.footer-contact>h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.social-links a>i{
+    font-size: 18px;
+    color: var(--color-ash) !important;
+    border-radius: 50%;
+    border: 1px solid var(--color-ash);
+    padding: 12px;
+    transition: all 0.5s ease-in-out;
+}
+
+.social-links a>i:hover{
+    color: var(--color-yellow) !important;
+    border-color: var(--color-yellow);
+}
+
+.copyright{
+    background-color: var(--color-navy);
+    width: 87vw !important;
+    padding: 20px 0;
 }
 
 @media (max-width:393px){
