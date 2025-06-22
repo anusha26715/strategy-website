@@ -1231,6 +1231,59 @@ section>h2,.testimonial-container>h2{
     background-color: rgba(123, 122, 122,0.6) !important;
 }
 
+/* faq section */
+
+.faq-context>h2{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.faq-context>p{
+    color: var(--color-white) !important;
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.faq-img>img{
+    width: 60%;
+    height: auto;
+}
+
+
+#accordionPanelsStayOpenExample{
+    --bs-accordion-color: var(--color-dark) !important;
+    --bs-accordion-bg: var(--color-dark) !important;
+    --bs-accordion-border-color:none;
+    --bs-accordion-btn-focus-box-shadow:none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.accordion-item{
+    border-radius: 15px !important;
+}
+
+
+.accordion-header{
+    --bs-accordion-active-bg:var(--color-dark) !important;
+}
+
+
+/* 1. Hover state (even if not opened yet) */
+.accordion-button:hover::after {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(64%) saturate(828%) hue-rotate(2deg) brightness(97%) contrast(98%);
+}
+
+/* 2. When it's open (not collapsed), make the arrow yellow */
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(64%) saturate(828%) hue-rotate(2deg) brightness(97%) contrast(98%);
+}
+
+.accordion-button:not(.collapsed){
+    color: var(--color-yellow) !important;
+}
+
 
 @media (max-width:393px){
     *{
