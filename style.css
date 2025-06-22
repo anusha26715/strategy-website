@@ -1284,6 +1284,136 @@ section>h2,.testimonial-container>h2{
     color: var(--color-yellow) !important;
 }
 
+/* contact section */
+.info-container{
+    margin-bottom: 20px;
+}
+
+
+.contact-wrapper{
+    background-color: var(--color-dark);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 20px 0;
+}
+
+.contact-icon{
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 204, 0,0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.contact-icon>i{
+    font-size: 26px;
+    color: var(--color-yellow) !important;
+}
+
+.info-context{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-context>h4{
+    font-size: 20px;
+}
+
+.info-context p{
+    margin-bottom: 0;
+}
+
+.info-text{
+    margin-bottom: 7px !important;
+}
+
+.form-overlap{
+    position: relative;
+    margin-top: -120px;
+}
+
+.contact-form-wrapper{
+    background-color: var(--color-dark);
+    padding: clamp(12px,5%,30px);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-form-wrapper>h2{
+    position: relative;
+}
+
+.contact-form-wrapper>h2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-yellow);
+}
+
+.form-cntr{
+    padding: 30px;
+}
+
+.form{
+    margin-bottom: 30px;
+}
+
+.input-with-icon{
+    border-radius: 8px;
+    padding: 12px 15px 12px 25px;
+    height: 3.5rem;
+    color: var(--default-color);
+    background-color: var(--surface-color);
+    font-size: 16px;
+    border: 1px solid var(--color-ash);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#inputwithIcon{
+    height: fit-content;
+}
+.input-with-icon>i{
+    color: var(--color-ash) !important;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+.input-with-icon:has(input:focus),#inputwithIcon:has(textarea:focus){
+    box-shadow: 0 0 5px 1px var(--color-yellow);
+    border-color: var(--color-yellow);
+}
+
+.contact-form-wrapper input,textarea{ 
+    background-color: transparent;
+    border: 0;
+    outline: none;    
+}
+
+.form-btn>button{
+    background-color: var(--color-yellow);
+    padding: 15px 35px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.form-btn>button:hover{
+    background-color: var(--color-hover-yellow);
+    box-shadow: 0 0 5px 2px var(--color-yellow);
+    transform: translateY(-5px);
+}
 
 @media (max-width:393px){
     *{
@@ -1308,6 +1438,10 @@ section>h2,.testimonial-container>h2{
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .form-btn>button{
+        width: 100%;
     }
 }
 
